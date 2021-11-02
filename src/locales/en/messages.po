@@ -13,158 +13,158 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/index.tsx:49
-#: src/pages/posts.tsx:20
+#: src/pages/index.tsx:51
 #: src/pages/posts.tsx:22
+#: src/pages/posts.tsx:24
 msgid "All Articles"
 msgstr ""
 
-#: src/components/Sidebar.tsx:31
+#: src/components/Sidebar.tsx:33
 msgid "Author"
 msgstr ""
 
-#: src/components/Sidebar.tsx:68
+#: src/components/Sidebar.tsx:71
 msgid "Click to copy"
 msgstr ""
 
-#: src/components/Header.tsx:33
+#: src/components/Header.tsx:39
 msgid "Contact"
 msgstr ""
 
-#: src/components/Sidebar.tsx:131
+#: src/components/Sidebar.tsx:135
 msgid "Donate Now"
 msgstr ""
 
-#: src/components/Featured.tsx:22
+#: src/components/Featured.tsx:29
 msgid "Featured"
 msgstr ""
 
-#: src/pages/index.tsx:37
+#: src/pages/index.tsx:39
 msgid "Featured Articles"
 msgstr ""
 
-#: src/pages/index.tsx:58
+#: src/pages/index.tsx:61
 msgid "Filter by author"
 msgstr ""
 
-#: src/pages/index.tsx:68
+#: src/pages/index.tsx:72
 msgid "Filter by topic"
 msgstr ""
 
-#: src/components/Sidebar.tsx:138
+#: src/components/Sidebar.tsx:143
 msgid "Get Membership"
 msgstr ""
 
-#: src/pages/404.tsx:33
+#: src/pages/404.tsx:46
 msgid "Go Home"
 msgstr ""
 
-#: src/pages/404.tsx:13
-#: src/pages/search.tsx:26
-#: src/templates/GhostAuthor.tsx:29
-#: src/templates/GhostPost.tsx:39
-#: src/templates/GhostTag.tsx:27
+#: src/pages/404.tsx:23
+#: src/pages/search.tsx:27
+#: src/templates/GhostAuthor.tsx:30
+#: src/templates/GhostPost.tsx:42
+#: src/templates/GhostTag.tsx:30
 msgid "Homepage"
 msgstr ""
 
-#: src/pages/404.tsx:29
+#: src/pages/404.tsx:39
 msgid "Looks like you got lost somewhere along the way. Don't worry, the wizard can help you get back!"
 msgstr ""
 
-#: src/components/Sidebar.tsx:81
+#: src/components/Sidebar.tsx:84
 msgid "MyCrypto is the number one way to manage all of your Ethereum Accounts"
 msgstr ""
 
-#: src/pages/404.tsx:8
-#: src/pages/404.tsx:17
-#: src/pages/404.tsx:26
+#: src/pages/404.tsx:18
+#: src/pages/404.tsx:27
+#: src/pages/404.tsx:36
 msgid "Page Not Found"
 msgstr ""
 
-#: src/components/Sidebar.tsx:126
+#: src/components/Sidebar.tsx:130
 msgid "Please consider making a donation or purchasing a MyCrypto Membership!"
 msgstr ""
 
-#: src/components/Featured.tsx:32
-#: src/components/Post.tsx:45
+#: src/components/Featured.tsx:39
+#: src/components/Post.tsx:46
 msgid "Read Now"
 msgstr ""
 
-#: src/pages/index.tsx:42
+#: src/pages/index.tsx:44
 msgid "Recent Articles"
 msgstr ""
 
-#: src/pages/search.tsx:45
+#: src/pages/search.tsx:47
 msgid "Results for \"{query}\""
 msgstr ""
 
-#: src/components/SearchField.tsx:33
-#: src/pages/search.tsx:21
-#: src/pages/search.tsx:36
+#: src/components/SearchField.tsx:38
+#: src/pages/search.tsx:22
+#: src/pages/search.tsx:37
 msgid "Search"
 msgstr ""
 
-#: src/pages/search.tsx:30
+#: src/pages/search.tsx:31
 msgid "Search Results"
 msgstr ""
 
-#: src/components/SearchField.tsx:10
+#: src/components/SearchField.tsx:13
 msgid "Search here..."
 msgstr ""
 
-#: src/components/Sidebar.tsx:93
+#: src/components/Sidebar.tsx:96
 msgid "Send Us A Message"
 msgstr ""
 
-#: src/components/Sidebar.tsx:56
+#: src/components/Sidebar.tsx:59
 msgid "Share"
 msgstr ""
 
-#: src/pages/index.tsx:79
+#: src/pages/index.tsx:83
 msgid "Show More"
 msgstr ""
 
-#: src/components/Search.tsx:41
+#: src/components/Search.tsx:44
 msgid "Sorry, there are no results for \"{query}\". Please try another search query."
 msgstr ""
 
-#: src/components/Sidebar.tsx:106
+#: src/components/Sidebar.tsx:110
 msgid "Support MyCrypto"
 msgstr ""
 
-#: src/components/Sidebar.tsx:119
+#: src/components/Sidebar.tsx:123
 msgid "We love helping the community stay safe and informed with these free educational articles, and are happy to walk you through solving problems even if they aren't directly related to MyCrypto."
 msgstr ""
 
-#: src/components/Layout.tsx:30
+#: src/components/Layout.tsx:31
 msgid "What would you like to read about?"
 msgstr ""
 
-#: src/components/Sidebar.tsx:84
+#: src/components/Sidebar.tsx:87
 msgid "You can always email us for one-on-one help using <0>support@mycrypto.com</0>"
 msgstr ""
 
-#: src/components/Sidebar.tsx:113
+#: src/components/Sidebar.tsx:117
 msgid "Your support enables MyCrypto to continue developing non-custodial, user-friendly cryptocurrency management solutions as a public good."
 msgstr ""
 
-#: src/components/Header.tsx:16
+#: src/components/Header.tsx:21
 msgid "app.mycrypto.com"
 msgstr ""
 
-#: src/templates/GhostAuthor.tsx:40
+#: src/templates/GhostAuthor.tsx:41
 msgid "{0, plural, zero {No articles} one {# article} many {# articles} other {# articles}}"
 msgstr ""
 
-#: src/templates/GhostTag.tsx:38
+#: src/templates/GhostTag.tsx:41
 msgid "{0, plural, zero {No articles} one {# article} many {# articles}}"
 msgstr ""
 
-#: src/templates/GhostAuthor.tsx:34
-#: src/templates/GhostTag.tsx:32
+#: src/templates/GhostAuthor.tsx:35
+#: src/templates/GhostTag.tsx:35
 msgid "{0}"
 msgstr ""
 
-#: src/components/Post.tsx:30
+#: src/components/Post.tsx:31
 msgid "{0} Min Read"
 msgstr ""

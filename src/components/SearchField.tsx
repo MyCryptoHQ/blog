@@ -1,15 +1,15 @@
 import { t } from '@lingui/macro';
-import type { BoxProps} from '@mycrypto/ui';
+import type { BoxProps } from '@mycrypto/ui';
 import { Box, Input } from '@mycrypto/ui';
 import { navigate } from 'gatsby';
-import type { ChangeEvent, FunctionComponent, KeyboardEvent} from 'react';
+import type { ChangeEvent, FunctionComponent, KeyboardEvent } from 'react';
 import { useState } from 'react';
 
-export interface SearchProps {
+export interface SearchFieldProps {
   placeholder?: string;
 }
 
-export const SearchField: FunctionComponent<SearchProps & BoxProps> = ({
+export const SearchField: FunctionComponent<SearchFieldProps & BoxProps> = ({
   placeholder = t`Search here...`,
   ...props
 }) => {

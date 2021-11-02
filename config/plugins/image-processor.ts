@@ -1,4 +1,4 @@
-import type { GatsbyCache, Reporter, Store } from 'gatsby';
+import type { Actions, GatsbyCache, Reporter, Store , NodePluginArgs } from 'gatsby';
 import { fluid } from 'gatsby-plugin-sharp';
 import { createRemoteFileNode } from 'gatsby-source-filesystem';
 import type { Node } from 'unist';
@@ -8,8 +8,8 @@ interface Settings {
   store: Store;
   cache: GatsbyCache;
   reporter: Reporter;
-  createNode(): void;
-  createNodeId(): void;
+  createNode: Actions['createNode'];
+  createNodeId: NodePluginArgs['createNodeId'];
 }
 
 interface ImageNode {
