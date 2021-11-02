@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2021-10-27 17:37+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/pages/index.tsx:49
+#: src/pages/posts.tsx:20
+#: src/pages/posts.tsx:22
+msgid "All Articles"
+msgstr ""
+
+#: src/components/Sidebar.tsx:31
+msgid "Author"
+msgstr ""
+
+#: src/components/Sidebar.tsx:68
+msgid "Click to copy"
+msgstr ""
+
+#: src/components/Header.tsx:33
+msgid "Contact"
+msgstr ""
+
+#: src/components/Sidebar.tsx:131
+msgid "Donate Now"
+msgstr ""
+
+#: src/components/Featured.tsx:22
+msgid "Featured"
+msgstr ""
+
+#: src/pages/index.tsx:37
+msgid "Featured Articles"
+msgstr ""
+
+#: src/pages/index.tsx:58
+msgid "Filter by author"
+msgstr ""
+
+#: src/pages/index.tsx:68
+msgid "Filter by topic"
+msgstr ""
+
+#: src/components/Sidebar.tsx:138
+msgid "Get Membership"
+msgstr ""
+
+#: src/pages/404.tsx:33
+msgid "Go Home"
+msgstr ""
+
+#: src/pages/404.tsx:13
+#: src/pages/search.tsx:26
+#: src/templates/GhostAuthor.tsx:29
+#: src/templates/GhostPost.tsx:39
+#: src/templates/GhostTag.tsx:27
+msgid "Homepage"
+msgstr ""
+
+#: src/pages/404.tsx:29
+msgid "Looks like you got lost somewhere along the way. Don't worry, the wizard can help you get back!"
+msgstr ""
+
+#: src/components/Sidebar.tsx:81
+msgid "MyCrypto is the number one way to manage all of your Ethereum Accounts"
+msgstr ""
+
+#: src/pages/404.tsx:8
+#: src/pages/404.tsx:17
+#: src/pages/404.tsx:26
+msgid "Page Not Found"
+msgstr ""
+
+#: src/components/Sidebar.tsx:126
+msgid "Please consider making a donation or purchasing a MyCrypto Membership!"
+msgstr ""
+
+#: src/components/Featured.tsx:32
+#: src/components/Post.tsx:45
+msgid "Read Now"
+msgstr ""
+
+#: src/pages/index.tsx:42
+msgid "Recent Articles"
+msgstr ""
+
+#: src/pages/search.tsx:45
+msgid "Results for \"{query}\""
+msgstr ""
+
+#: src/components/SearchField.tsx:33
+#: src/pages/search.tsx:21
+#: src/pages/search.tsx:36
+msgid "Search"
+msgstr ""
+
+#: src/pages/search.tsx:30
+msgid "Search Results"
+msgstr ""
+
+#: src/components/SearchField.tsx:10
+msgid "Search here..."
+msgstr ""
+
+#: src/components/Sidebar.tsx:93
+msgid "Send Us A Message"
+msgstr ""
+
+#: src/components/Sidebar.tsx:56
+msgid "Share"
+msgstr ""
+
+#: src/pages/index.tsx:79
+msgid "Show More"
+msgstr ""
+
+#: src/components/Search.tsx:41
+msgid "Sorry, there are no results for \"{query}\". Please try another search query."
+msgstr ""
+
+#: src/components/Sidebar.tsx:106
+msgid "Support MyCrypto"
+msgstr ""
+
+#: src/components/Sidebar.tsx:119
+msgid "We love helping the community stay safe and informed with these free educational articles, and are happy to walk you through solving problems even if they aren't directly related to MyCrypto."
+msgstr ""
+
+#: src/components/Layout.tsx:30
+msgid "What would you like to read about?"
+msgstr ""
+
+#: src/components/Sidebar.tsx:84
+msgid "You can always email us for one-on-one help using <0>support@mycrypto.com</0>"
+msgstr ""
+
+#: src/components/Sidebar.tsx:113
+msgid "Your support enables MyCrypto to continue developing non-custodial, user-friendly cryptocurrency management solutions as a public good."
+msgstr ""
+
+#: src/components/Header.tsx:16
+msgid "app.mycrypto.com"
+msgstr ""
+
+#: src/templates/GhostAuthor.tsx:40
+msgid "{0, plural, zero {No articles} one {# article} many {# articles} other {# articles}}"
+msgstr ""
+
+#: src/templates/GhostTag.tsx:38
+msgid "{0, plural, zero {No articles} one {# article} many {# articles}}"
+msgstr ""
+
+#: src/templates/GhostAuthor.tsx:34
+#: src/templates/GhostTag.tsx:32
+msgid "{0}"
+msgstr ""
+
+#: src/components/Post.tsx:30
+msgid "{0} Min Read"
+msgstr ""
