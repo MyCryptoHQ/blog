@@ -2,13 +2,12 @@ import { Trans } from '@lingui/macro';
 import { Body } from '@mycrypto/ui';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Index } from 'lunr';
-import type { FunctionComponent} from 'react';
+import type { FunctionComponent } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
 import type { GhostPost } from '../types';
 import { Post } from './Post';
 import { Posts } from './Posts';
-
 
 export interface SearchProps {
   query: string;

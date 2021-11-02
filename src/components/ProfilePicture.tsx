@@ -1,11 +1,10 @@
-import type { BoxProps} from '@mycrypto/ui';
+import type { BoxProps } from '@mycrypto/ui';
 import { Box, Image } from '@mycrypto/ui';
 import type { ImageDataLike } from 'gatsby-plugin-image';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import type { FunctionComponent } from 'react';
 
 import icon from '../assets/images/author.svg';
-
 
 export type ProfilePictureProps = BoxProps & {
   image: ImageDataLike;

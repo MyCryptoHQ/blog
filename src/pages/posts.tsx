@@ -6,7 +6,6 @@ import type { FunctionComponent } from 'react';
 import { Page, Post, Posts } from '../components';
 import type { GhostPost } from '../types';
 
-
 export interface AllPostsProps {
   data: {
     allGhostPost: {

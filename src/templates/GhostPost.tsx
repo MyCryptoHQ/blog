@@ -7,7 +7,6 @@ import { Contents, Label, Link, Page } from '../components';
 import { Sidebar } from '../components/Sidebar';
 import type { GhostPost } from '../types';
 
-
 export interface PostProps {
   data: {
     ghostPost: Pick<

@@ -1,4 +1,4 @@
-import type { Actions, GatsbyCache, Reporter, Store , NodePluginArgs } from 'gatsby';
+import type { Actions, GatsbyCache, Reporter, Store, NodePluginArgs } from 'gatsby';
 import { fluid } from 'gatsby-plugin-sharp';
 import { createRemoteFileNode } from 'gatsby-source-filesystem';
 import type { Node } from 'unist';

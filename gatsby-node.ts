@@ -7,7 +7,6 @@ import unified from 'unified';
 
 import { imageProcessor } from './config/plugins';
 
-
 const gatsbyNode: GatsbyNode = {
   async onCreateNode({ node, actions, store, cache, reporter, createNodeId }) {
     const { createNode, createNodeField, createParentChildLink } = actions;

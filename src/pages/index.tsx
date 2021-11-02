@@ -6,7 +6,6 @@ import type { FunctionComponent } from 'react';
 import { Authors, Featured, Link, Page, Post, Posts, Tags } from '../components';
 import type { GhostPost } from '../types';
 
-
 export interface IndexProps {
   data: {
     featuredPost: Pick<GhostPost, 'slug' | 'title' | 'excerpt' | 'image'>;

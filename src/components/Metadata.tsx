@@ -6,7 +6,6 @@ import { Helmet } from 'react-helmet';
 
 import type { GhostAuthor } from '../types';
 
-
 export interface MetadataProps {
   title?: string;
   description?: string;

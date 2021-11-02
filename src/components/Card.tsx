@@ -1,4 +1,4 @@
-import type { BoxProps} from '@mycrypto/ui';
+import type { BoxProps } from '@mycrypto/ui';
 import { Flex } from '@mycrypto/ui';
 import type { FunctionComponent } from 'react';
 
