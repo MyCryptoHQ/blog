@@ -48,3 +48,36 @@ jobs:
 
       - name: Lint Formatting
         run: yarn lint:format
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Read .nvmrc
+        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
+
+      - name: Setup Node.js ${{ steps.nvm.outputs.NVMRC }}
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: ${{ steps.nvm.outputs.NVMRC }}
+
+      - name: Cache Dependencies
+        uses: actions/cache@v2.1.4
+        with:
+          path: |
+            node_modules
+            .cache
+          key: yarn-${{ hashFiles('yarn.lock') }}
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Compile Translations
+        run: yarn compile
+
+      - name: Build
+        run: yarn build
