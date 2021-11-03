@@ -96,7 +96,7 @@ export const query = graphql`
       slug
       title
       excerpt
-      image: childFile {
+      image {
         childImageSharp {
           gatsbyImageData(
             layout: FULL_WIDTH

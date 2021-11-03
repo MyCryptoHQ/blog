@@ -26,7 +26,7 @@ export const authorQuery = graphql`
   fragment Author on GhostAuthor {
     slug
     name
-    image: childFile {
+    image {
       childImageSharp {
         gatsbyImageData(layout: FIXED, width: 40, height: 40)
       }

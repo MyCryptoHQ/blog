@@ -76,7 +76,7 @@ export const query = graphql`
       slug
       name
       description: meta_description
-      image: childFile {
+      image {
         childImageSharp {
           gatsbyImageData(layout: FIXED, width: 80, height: 80)
         }

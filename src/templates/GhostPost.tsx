@@ -104,7 +104,7 @@ export const query = graphql`
       primaryAuthor: primary_author {
         ...Author
       }
-      image: childFile {
+      image {
         childImageSharp {
           gatsbyImageData(layout: FIXED, width: 1200, height: 630)
         }

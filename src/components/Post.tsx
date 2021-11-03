@@ -62,7 +62,7 @@ export const postQuery = graphql`
       slug
       name
     }
-    image: childFile {
+    image {
       childImageSharp {
         gatsbyImageData(width: 850, height: 531, transformOptions: { cropFocus: CENTER })
       }

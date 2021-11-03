@@ -9,7 +9,7 @@ import { imageProcessor } from './config/plugins';
 
 const gatsbyNode: GatsbyNode = {
   async onCreateNode({ node, actions, store, cache, reporter, createNodeId }) {
-    const { createNode, createNodeField, createParentChildLink } = actions;
+    const { createNode, createNodeField } = actions;
 
     const processImage = async (field: string) => {
       if (!node[field]) {
@@ -25,7 +25,7 @@ const gatsbyNode: GatsbyNode = {
         createNodeId
       });
 
-      createParentChildLink({ parent: node, child: fileNode });
+      createNodeField({ node, name: 'imageId', value: fileNode.id });
     };
 
     const processHtml = async () => {
@@ -50,6 +50,20 @@ const gatsbyNode: GatsbyNode = {
     if (node.internal.type === 'GhostAuthor') {
       await processImage('profile_image');
     }
+  },
+
+  async createSchemaCustomization({ actions }) {
+    const { createTypes } = actions;
+
+    createTypes(`
+      type GhostPost implements Node {
+        image: File @link(from: "fields.imageId")
+      }
+      
+      type GhostAuthor implements Node {
+        image: File @link(from: "fields.imageId")
+      }
+    `);
   },
 
   async createResolvers({ createResolvers }): Promise<void> {
