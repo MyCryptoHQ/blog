@@ -36,7 +36,7 @@ export const FOOTER_LINK_COLUMNS = [
         url: 'https://shop.trezor.io/?offer_id=10&aff_id=1735'
       },
       {
-        title: 'Get QuikNode',
+        title: 'Get QuickNode',
         url: 'https://quiknode.io?tap_a=67226-09396e&tap_s=860550-6c3251'
       },
       {
