@@ -18,6 +18,7 @@ const gatsbyNode: GatsbyNode = {
 
       const fileNode = await createRemoteFileNode({
         url: node[field] as string,
+        parentNodeId: node.id,
         store,
         cache,
         reporter,
