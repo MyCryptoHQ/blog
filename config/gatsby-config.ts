@@ -4,6 +4,7 @@ import { resolve } from 'path';
 import type { GhostPost } from '../src/types';
 
 const config: GatsbyConfig = {
+  jsxRuntime: 'automatic',
   pathPrefix: '/',
   siteMetadata: {
     siteUrl: 'https://blog.mycrypto.com/'
@@ -159,6 +160,15 @@ const config: GatsbyConfig = {
               }))
           }
         ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-s3',
+      options: {
+        bucketName: 'blog.mycrypto.com',
+        protocol: 'https',
+        hostname: 'blog.mycrypto.com',
+        generateRedirectObjectsForPermanentRedirects: true
       }
     }
   ]
