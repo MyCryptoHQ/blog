@@ -51,15 +51,6 @@ const config: GatsbyConfig = {
       }
     },
     {
-      resolve: 'gatsby-plugin-s3',
-      options: {
-        bucketName: 'blog.mycrypto.com',
-        protocol: 'https',
-        hostname: 'blog.mycrypto.com',
-        generateRedirectObjectsForPermanentRedirects: true
-      }
-    },
-    {
       resolve: 'gatsby-plugin-local-search',
       options: {
         name: 'posts',
