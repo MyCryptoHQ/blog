@@ -83,4 +83,3 @@ jobs:
         run: yarn build
         env:
           GHOST_API_KEY: ${{ secrets.GHOST_API_KEY }}
-
