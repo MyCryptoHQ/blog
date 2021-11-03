@@ -30,12 +30,7 @@ const HTML: FunctionComponent<HTMLProps> = ({
       <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
       {postBodyComponents}
 
-      <script
-        src="https://t.ghostboard.io/min.js"
-        async
-        defer
-        data-gbid="60a4385387568653d41521d8"
-      />
+      <script src="/vendor/ghostboard.js" async defer data-gbid="60a4385387568653d41521d8" />
       <noscript>
         <img
           src="https://ghostboard.io/api/noscript/60a4385387568653d41521d8/pixel.gif"
