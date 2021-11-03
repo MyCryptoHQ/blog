@@ -34,7 +34,6 @@ if (typeof window.Matomo !== 'object') {
       af = 0,
       X = 0,
       m = false;
-
     function p(at) {
       try {
         return V(at);
@@ -42,32 +41,25 @@ if (typeof window.Matomo !== 'object') {
         return unescape(at);
       }
     }
-
     function M(au) {
       var at = typeof au;
       return at !== 'undefined';
     }
-
     function C(at) {
       return typeof at === 'function';
     }
-
     function Z(at) {
       return typeof at === 'object';
     }
-
     function x(at) {
       return typeof at === 'string' || at instanceof String;
     }
-
     function ak(at) {
       return typeof at === 'number' || at instanceof Number;
     }
-
     function ac(at) {
       return M(at) && (ak(at) || (x(at) && at.length));
     }
-
     function D(au) {
       if (!au) {
         return true;
@@ -81,14 +73,12 @@ if (typeof window.Matomo !== 'object') {
       }
       return av;
     }
-
     function ao(at) {
       var au = typeof console;
       if (au !== 'undefined' && console && console.error) {
         console.error(at);
       }
     }
-
     function aj() {
       var ay, ax, aA, au, at;
       for (ay = 0; ay < arguments.length; ay += 1) {
@@ -153,7 +143,6 @@ if (typeof window.Matomo !== 'object') {
         }
       }
     }
-
     function ar(aw, av, au, at) {
       if (aw.addEventListener) {
         aw.addEventListener(av, au, at);
@@ -164,7 +153,6 @@ if (typeof window.Matomo !== 'object') {
       }
       aw['on' + av] = au;
     }
-
     function n(at) {
       if (J.readyState === 'complete') {
         at();
@@ -178,7 +166,6 @@ if (typeof window.Matomo !== 'object') {
         }
       }
     }
-
     function q(aw) {
       var at = false;
       if (J.attachEvent) {
@@ -238,7 +225,6 @@ if (typeof window.Matomo !== 'object') {
         false
       );
     }
-
     function ag(au, az, aA) {
       if (!au) {
         return '';
@@ -262,7 +248,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return at;
     }
-
     function am() {
       var at;
       m = true;
@@ -278,7 +263,6 @@ if (typeof window.Matomo !== 'object') {
         } while (at.getTimeAlias() < r);
       }
     }
-
     function o(av, au) {
       var at = J.createElement('script');
       at.type = 'text/javascript';
@@ -296,7 +280,6 @@ if (typeof window.Matomo !== 'object') {
       }
       J.getElementsByTagName('head')[0].appendChild(at);
     }
-
     function N() {
       var at = '';
       try {
@@ -315,23 +298,19 @@ if (typeof window.Matomo !== 'object') {
       }
       return at;
     }
-
     function s(at) {
       var av = new RegExp('^([a-z]+):'),
         au = av.exec(at);
       return au ? au[1] : null;
     }
-
     function d(at) {
       var av = new RegExp('^(?:(?:https?|ftp):)/*(?:[^@]+@)?([^:/#]+)'),
         au = av.exec(at);
       return au ? au[1] : at;
     }
-
     function G(at) {
       return /^[0-9][0-9]*(\.[0-9]+)?$/.test(at);
     }
-
     function Q(av, aw) {
       var at = {},
         au;
@@ -342,7 +321,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return at;
     }
-
     function B(av) {
       var at = {},
         au;
@@ -363,7 +341,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return at;
     }
-
     function l(au) {
       var av = '',
         at;
@@ -374,27 +351,22 @@ if (typeof window.Matomo !== 'object') {
       }
       return av;
     }
-
     function an(au, at) {
       au = String(au);
       return au.lastIndexOf(at, 0) === 0;
     }
-
     function U(au, at) {
       au = String(au);
       return au.indexOf(at, au.length - at.length) !== -1;
     }
-
     function A(au, at) {
       au = String(au);
       return au.indexOf(at) !== -1;
     }
-
     function f(au, at) {
       au = String(au);
       return au.substr(0, au.length - at);
     }
-
     function I(aw, av, ay) {
       aw = String(aw);
       if (!ay) {
@@ -416,7 +388,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return ax + t(av) + '=' + t(ay) + au;
     }
-
     function j(au, av) {
       au = String(au);
       if (au.indexOf('?' + av + '=') === -1 && au.indexOf('&' + av + '=') === -1) {
@@ -454,25 +425,21 @@ if (typeof window.Matomo !== 'object') {
       }
       return aA;
     }
-
     function e(av, au) {
       var at = '[\\?&#]' + au + '=([^&#]*)';
       var ax = new RegExp(at);
       var aw = ax.exec(av);
       return aw ? p(aw[1]) : '';
     }
-
     function a(at) {
       if (at && String(at) === at) {
         return at.replace(/^\s+|\s+$/g, '');
       }
       return at;
     }
-
     function F(at) {
       return unescape(t(at));
     }
-
     function aq(aI) {
       var av = function (aO, aN) {
           return (aO << aN) | (aO >>> (32 - aN));
@@ -593,7 +560,6 @@ if (typeof window.Matomo !== 'object') {
       aM = aJ(aC) + aJ(aA) + aJ(az) + aJ(ax) + aJ(aw);
       return aM.toLowerCase();
     }
-
     function ae(av, at, au) {
       if (!av) {
         av = '';
@@ -619,7 +585,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return [av, at, au];
     }
-
     function O(au) {
       var at = au.length;
       if (au.charAt(--at) === '.') {
@@ -633,7 +598,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return au;
     }
-
     function ap(au) {
       au = au && au.text ? au.text : au;
       if (!x(au)) {
@@ -644,7 +608,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return au;
     }
-
     function S(at) {
       if (!at) {
         return [];
@@ -657,7 +620,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return [];
     }
-
     function Y(au, at) {
       if (!au || !at) {
         return false;
@@ -673,7 +635,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return false;
     }
-
     function P(av, aw) {
       if (av && av.indexOf) {
         return av.indexOf(aw);
@@ -697,12 +658,10 @@ if (typeof window.Matomo !== 'object') {
       }
       return -1;
     }
-
     function i(av) {
       if (!av) {
         return false;
       }
-
       function at(ax, ay) {
         if (W.getComputedStyle) {
           return J.defaultView.getComputedStyle(ax, null)[ay];
@@ -711,7 +670,6 @@ if (typeof window.Matomo !== 'object') {
           return ax.currentStyle[ay];
         }
       }
-
       function aw(ax) {
         ax = ax.parentNode;
         while (ax) {
@@ -722,7 +680,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       }
-
       function au(az, aF, ax, aC, aA, aD, aB) {
         var ay = az.parentNode,
           aE = 1;
@@ -769,10 +726,8 @@ if (typeof window.Matomo !== 'object') {
         }
         return true;
       }
-
       return au(av);
     }
-
     var ai = {
       htmlCollectionToArray: function (av) {
         var at = [],
@@ -1401,7 +1356,6 @@ if (typeof window.Matomo !== 'object') {
         return false;
       }
     };
-
     function aa(au, ax) {
       if (ax) {
         return ax;
@@ -1429,7 +1383,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return au;
     }
-
     function R(az) {
       var aB = 'Matomo_Overlay';
       var au = new RegExp(
@@ -1456,7 +1409,6 @@ if (typeof window.Matomo !== 'object') {
       var aA = W.name.split('###');
       return aA.length === 4 && aA[0] === aB;
     }
-
     function ad(au, az, av) {
       var ay = W.name.split('###'),
         ax = ay[1],
@@ -1467,7 +1419,6 @@ if (typeof window.Matomo !== 'object') {
         Matomo_Overlay_Client.initialize(aA, av, ax, at, aw);
       });
     }
-
     function v() {
       var av;
       try {
@@ -1484,7 +1435,6 @@ if (typeof window.Matomo !== 'object') {
         return true;
       }
     }
-
     function T(cj, cf) {
       var bP = this,
         bj = 'mtm_consent',
@@ -1662,7 +1612,6 @@ if (typeof window.Matomo !== 'object') {
       } catch (cF) {
         bp = '';
       }
-
       function aH(dt) {
         if (bs) {
           return 0;
@@ -1671,9 +1620,7 @@ if (typeof window.Matomo !== 'object') {
           ds = dr.exec(J.cookie);
         return ds ? V(ds[2]) : 0;
       }
-
       bJ = !aH(cT);
-
       function dl(dv, dw, dz, dy, dt, du, dx) {
         if (bs && dv !== cT) {
           return;
@@ -1702,7 +1649,6 @@ if (typeof window.Matomo !== 'object') {
           ao(dr);
         }
       }
-
       function b8(dr) {
         var ds;
         dr = j(dr, az);
@@ -1712,7 +1658,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return dr;
       }
-
       function b1(dt, dr) {
         var du = s(dr),
           ds;
@@ -1733,7 +1678,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return dt + dr;
       }
-
       function cO(dt, dr) {
         var ds;
         dt = String(dt).toLowerCase();
@@ -1752,7 +1696,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       }
-
       function cq(dr) {
         var ds = document.createElement('a');
         if (dr.indexOf('//') !== 0 && dr.indexOf('http') !== 0) {
@@ -1770,7 +1713,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return '';
       }
-
       function a9(ds, dr) {
         if (!an(dr, '/')) {
           dr = '/' + dr;
@@ -1806,7 +1748,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return ds.indexOf(dr) === 0;
       }
-
       function aw(dv, dx) {
         var ds, dr, dt, du, dw;
         for (ds = 0; ds < aC.length; ds++) {
@@ -1818,7 +1759,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       }
-
       function a1(du) {
         var ds, dr, dt;
         for (ds = 0; ds < aC.length; ds++) {
@@ -1838,7 +1778,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       }
-
       function cu(dr, dt) {
         dr = dr.replace('send_image=0', 'send_image=1');
         var ds = new Image(1, 1);
@@ -1855,20 +1794,17 @@ if (typeof window.Matomo !== 'object') {
         };
         ds.src = aI + (aI.indexOf('?') < 0 ? '?' : '&') + dr;
       }
-
       function cL(dr) {
         if (dh === 'POST') {
           return true;
         }
         return dr && (dr.length > 2000 || dr.indexOf('{"requests"') === 0);
       }
-
       function aP() {
         return (
           'object' === typeof g && 'function' === typeof g.sendBeacon && 'function' === typeof Blob
         );
       }
-
       function bc(dv, dy, dx) {
         var dt = aP();
         if (!dt) {
@@ -1892,7 +1828,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return dz;
       }
-
       function dc(ds, dt, dr) {
         if (!M(dr) || null === dr) {
           dr = true;
@@ -1943,7 +1878,6 @@ if (typeof window.Matomo !== 'object') {
           }
         }, 50);
       }
-
       function cl(ds) {
         var dr = new Date();
         var dt = dr.getTime() + ds;
@@ -1951,23 +1885,19 @@ if (typeof window.Matomo !== 'object') {
           r = dt;
         }
       }
-
       function bg() {
         bi = true;
         cE = new Date().getTime();
       }
-
       function dk() {
         var dr = new Date().getTime();
         return !cE || dr - cE > bb;
       }
-
       function aD() {
         if (dk()) {
           bX();
         }
       }
-
       function a0() {
         if (J.visibilityState === 'hidden' && dk()) {
           bX();
@@ -1977,7 +1907,6 @@ if (typeof window.Matomo !== 'object') {
           }
         }
       }
-
       function dn() {
         if (aS || !bb) {
           return;
@@ -1995,7 +1924,6 @@ if (typeof window.Matomo !== 'object') {
           }
         });
       }
-
       function cJ(dv) {
         var ds = new Date();
         var dr = ds.getTime();
@@ -2013,7 +1941,6 @@ if (typeof window.Matomo !== 'object') {
         }
         dv();
       }
-
       function aT() {
         if (aH(cT)) {
           bJ = false;
@@ -2023,7 +1950,6 @@ if (typeof window.Matomo !== 'object') {
           }
         }
       }
-
       function bM(ds, dr, dt) {
         aT();
         if (!bJ) {
@@ -2052,14 +1978,12 @@ if (typeof window.Matomo !== 'object') {
           dn();
         }
       }
-
       function cp(dr) {
         if (cX) {
           return false;
         }
         return dr && dr.length;
       }
-
       function db(dr, dv) {
         if (!dv || dv >= dr.length) {
           return [dr];
@@ -2072,7 +1996,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return du;
       }
-
       function dm(ds, dr) {
         if (!cp(ds)) {
           return;
@@ -2097,15 +2020,12 @@ if (typeof window.Matomo !== 'object') {
           cl(dr);
         });
       }
-
       function aY(dr) {
         return bq + dr + '.' + cc + '.' + bv;
       }
-
       function b5(dt, ds, dr) {
         dl(dt, '', -86400, ds, dr);
       }
-
       function cb() {
         if (bs) {
           return '0';
@@ -2119,11 +2039,9 @@ if (typeof window.Matomo !== 'object') {
         b5(dr);
         return ds;
       }
-
       function bo() {
         bv = cd((c5 || c1) + (bw || '/')).slice(0, 4);
       }
-
       function cP() {
         if (M(df.res)) {
           return df;
@@ -2167,7 +2085,6 @@ if (typeof window.Matomo !== 'object') {
         df.res = parseInt(dt, 10) + 'x' + parseInt(dr, 10);
         return df;
       }
-
       function b3() {
         var ds = aY('cvar'),
           dr = aH(ds);
@@ -2179,13 +2096,11 @@ if (typeof window.Matomo !== 'object') {
         }
         return {};
       }
-
       function cM() {
         if (aV === false) {
           aV = b3();
         }
       }
-
       function cY() {
         var dr = cP();
         return cd(
@@ -2196,23 +2111,19 @@ if (typeof window.Matomo !== 'object') {
             Math.random()
         ).slice(0, 16);
       }
-
       function aF() {
         var dr = cP();
         return cd((g.userAgent || '') + (g.platform || '') + W.JSON.stringify(dr)).slice(0, 6);
       }
-
       function bl() {
         return Math.floor(new Date().getTime() / 1000);
       }
-
       function aO() {
         var ds = bl();
         var dt = aF();
         var dr = String(ds) + dt;
         return dr;
       }
-
       function da(dt) {
         dt = String(dt);
         var dw = aF();
@@ -2230,7 +2141,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       }
-
       function dp(dr) {
         if (!cU) {
           return '';
@@ -2250,7 +2160,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return '';
       }
-
       function cV() {
         if (!bU) {
           bU = dp(bT);
@@ -2281,7 +2190,6 @@ if (typeof window.Matomo !== 'object') {
         dv = ['1', du, dr];
         return dv;
       }
-
       function a4() {
         var du = cV(),
           ds = du[0],
@@ -2289,7 +2197,6 @@ if (typeof window.Matomo !== 'object') {
           dr = du[2];
         return { newVisitor: ds, uuid: dt, createTs: dr };
       }
-
       function aL() {
         var du = new Date(),
           ds = du.getTime(),
@@ -2298,7 +2205,6 @@ if (typeof window.Matomo !== 'object') {
         var dt = dr * 1000 + cR - ds;
         return dt;
       }
-
       function aR(dr) {
         if (!cc) {
           return;
@@ -2311,7 +2217,6 @@ if (typeof window.Matomo !== 'object') {
         var du = dr.uuid + '.' + dr.createTs + '.';
         dl(aY('id'), du, aL(), bw, c5, bY, aN);
       }
-
       function bS() {
         var dr = aH(aY('ref'));
         if (dr.length) {
@@ -2324,7 +2229,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return ['', '', 0, ''];
       }
-
       function bD(dt) {
         var ds = bq + 'testcookie_domain';
         var dr = 'testvalue';
@@ -2335,7 +2239,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       }
-
       function aJ() {
         var ds = bs;
         bs = false;
@@ -2348,11 +2251,9 @@ if (typeof window.Matomo !== 'object') {
         }
         bs = ds;
       }
-
       function b9(dr) {
         cc = dr;
       }
-
       function dq(dv) {
         if (!dv || !Z(dv)) {
           return;
@@ -2373,11 +2274,9 @@ if (typeof window.Matomo !== 'object') {
         }
         return dw;
       }
-
       function ci() {
         dl(aY('ses'), '1', ct, bw, c5, bY, aN);
       }
-
       function bm() {
         var du = '';
         var ds = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -2388,7 +2287,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return du;
       }
-
       function aE(ds) {
         if (cs !== '') {
           ds += cs;
@@ -2456,7 +2354,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return ds + dr;
       }
-
       function cx(dt, dN, dO) {
         var dM,
           ds = new Date(),
@@ -2587,7 +2484,6 @@ if (typeof window.Matomo !== 'object') {
             dt += '&data=' + t(W.JSON.stringify(at));
           }
         }
-
         function dz(dU, dV) {
           var dW = W.JSON.stringify(dU);
           if (dW.length > 2) {
@@ -2595,7 +2491,6 @@ if (typeof window.Matomo !== 'object') {
           }
           return '';
         }
-
         var dQ = dq(b2);
         var dI = dq(cr);
         dt += dz(dQ, 'cvar');
@@ -2631,7 +2526,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return dt;
       }
-
       bX = function bd() {
         var dr = new Date();
         dr = dr.getTime();
@@ -2644,7 +2538,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       };
-
       function bx(du, dt, dy, dv, dr, dB) {
         var dx = 'idgoal=0',
           ds = new Date(),
@@ -2693,19 +2586,16 @@ if (typeof window.Matomo !== 'object') {
           c8 = {};
         }
       }
-
       function b4(dr, dv, du, dt, ds, dw) {
         if (String(dr).length && M(dv)) {
           bx(dr, dv, du, dt, ds, dw);
         }
       }
-
       function bz(dr) {
         if (M(dr)) {
           bx('', dr, '', '', '', '');
         }
       }
-
       function b6(ds, du, dt) {
         if (!bH) {
           aQ = bm();
@@ -2716,7 +2606,6 @@ if (typeof window.Matomo !== 'object') {
         }
         bM(dr, bQ, dt);
       }
-
       function a6(dt, ds) {
         var du,
           dr = '(^| )(piwik[_-]' + ds + '|matomo[_-]' + ds;
@@ -2728,11 +2617,9 @@ if (typeof window.Matomo !== 'object') {
         dr += ')( |$)';
         return new RegExp(dr);
       }
-
       function aZ(dr) {
         return aI && dr && 0 === String(dr).indexOf(aI);
       }
-
       function cB(dv, dr, dw, ds) {
         if (aZ(dr)) {
           return 0;
@@ -2751,7 +2638,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return 'link';
       }
-
       function ay(ds) {
         var dr;
         dr = ds.parentNode;
@@ -2764,7 +2650,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return ds;
       }
-
       function dj(dw) {
         dw = ay(dw);
         if (!ai.hasNodeAttribute(dw, 'href')) {
@@ -2789,7 +2674,6 @@ if (typeof window.Matomo !== 'object') {
           }
         }
       }
-
       function aU(dr, ds, dt, du) {
         var dv = w.buildInteractionRequestParams(dr, ds, dt, du);
         if (!dv) {
@@ -2797,7 +2681,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return cx(dv, null, 'contentInteraction');
       }
-
       function bh(dr, ds) {
         if (!dr || !ds) {
           return false;
@@ -2812,7 +2695,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return true;
       }
-
       function cA(dt, ds, dv) {
         if (!dt) {
           return;
@@ -2833,7 +2715,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return w.buildInteractionRequestParams(ds, du.name, du.piece, du.target);
       }
-
       function a2(ds) {
         if (!cg || !cg.length) {
           return false;
@@ -2847,7 +2728,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       }
-
       function a3(dr) {
         return function (dv) {
           if (!dr) {
@@ -2878,7 +2758,6 @@ if (typeof window.Matomo !== 'object') {
           return bP.trackContentInteractionNode(ds, 'click');
         };
       }
-
       function b7(dt) {
         if (!dt || !dt.length) {
           return;
@@ -2892,7 +2771,6 @@ if (typeof window.Matomo !== 'object') {
           }
         }
       }
-
       function bE(dt, du) {
         if (!dt || !dt.length) {
           return [];
@@ -2923,12 +2801,10 @@ if (typeof window.Matomo !== 'object') {
         }
         return dv;
       }
-
       function cG(ds) {
         var dr = w.collectContent(ds);
         return bE(dr, ds);
       }
-
       function bf(ds) {
         if (!ds || !ds.length) {
           return [];
@@ -2945,12 +2821,10 @@ if (typeof window.Matomo !== 'object') {
         }
         return cG(ds);
       }
-
       function aK(dt, dr, ds) {
         var du = w.buildImpressionRequestParams(dt, dr, ds);
         return cx(du, null, 'contentImpression');
       }
-
       function di(du, ds) {
         if (!du) {
           return;
@@ -2965,7 +2839,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return aU(ds, dt.name, dt.piece, dt.target);
       }
-
       function cW(ds, du, dr, dt) {
         return (
           'e_c=' +
@@ -2977,7 +2850,6 @@ if (typeof window.Matomo !== 'object') {
           '&ca=1'
         );
       }
-
       function ax(dt, dv, dr, du, dx, dw) {
         if (!ac(dt) || !ac(dv)) {
           ao(
@@ -2988,7 +2860,6 @@ if (typeof window.Matomo !== 'object') {
         var ds = cx(cW(dt, dv, dr, du), dx, 'event');
         bM(ds, bQ, dw);
       }
-
       function ce(dr, du, ds, dv) {
         var dt = cx(
           'search=' +
@@ -3000,12 +2871,10 @@ if (typeof window.Matomo !== 'object') {
         );
         bM(dt, bQ);
       }
-
       function c0(dr, dv, du, dt) {
         var ds = cx('idgoal=' + dr + (dv ? '&revenue=' + dv : ''), du, 'goal');
         bM(ds, bQ, dt);
       }
-
       function c9(du, dr, dy, dx, dt) {
         var dw = dr + '=' + t(b8(du));
         var ds = cA(dt, 'click', du);
@@ -3015,14 +2884,12 @@ if (typeof window.Matomo !== 'object') {
         var dv = cx(dw, dy, 'link');
         bM(dv, bQ, dx);
       }
-
       function b0(ds, dr) {
         if (ds !== '') {
           return ds + dr.charAt(0).toUpperCase() + dr.slice(1);
         }
         return dr;
       }
-
       function cm(dw) {
         var dv,
           dr,
@@ -3048,13 +2915,11 @@ if (typeof window.Matomo !== 'object') {
         }
         dw();
       }
-
       function by() {
         var ds = bP.getVisitorId();
         var dr = aO();
         return ds + dr;
       }
-
       function co(dr) {
         if (!dr) {
           return;
@@ -3074,7 +2939,6 @@ if (typeof window.Matomo !== 'object') {
         ds = I(ds, az, dt);
         ai.setAnyAttribute(dr, 'href', ds);
       }
-
       function br(du) {
         var dv = ai.getAttributeValueFromNode(du, 'href');
         if (!dv) {
@@ -3096,7 +2960,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return false;
       }
-
       function cN(dr) {
         var ds = dj(dr);
         if (ds && ds.type) {
@@ -3111,11 +2974,9 @@ if (typeof window.Matomo !== 'object') {
           }
         }
       }
-
       function cC() {
         return J.all && !J.addEventListener;
       }
-
       function c2(dr) {
         var dt = dr.which;
         var ds = typeof dr.button;
@@ -3148,7 +3009,6 @@ if (typeof window.Matomo !== 'object') {
         }
         return dt;
       }
-
       function bZ(dr) {
         switch (c2(dr)) {
           case 1:
@@ -3159,15 +3019,12 @@ if (typeof window.Matomo !== 'object') {
             return 'right';
         }
       }
-
       function a7(dr) {
         return dr.target || dr.srcElement;
       }
-
       function c3(dr) {
         return dr === 'A' || dr === 'AREA';
       }
-
       function aG(dr) {
         function ds(du) {
           var dv = a7(du);
@@ -3181,7 +3038,6 @@ if (typeof window.Matomo !== 'object') {
             return dv;
           }
         }
-
         return function (dv) {
           dv = dv || W.event;
           var dw = ds(dv);
@@ -3220,7 +3076,6 @@ if (typeof window.Matomo !== 'object') {
           }
         };
       }
-
       function av(du, dt, dr) {
         var ds = typeof dt;
         if (ds === 'undefined') {
@@ -3233,7 +3088,6 @@ if (typeof window.Matomo !== 'object') {
           ar(du, 'contextmenu', aG(dt), dr);
         }
       }
-
       function aX(ds, dv, dw) {
         if (ck) {
           return true;
@@ -3241,11 +3095,9 @@ if (typeof window.Matomo !== 'object') {
         ck = true;
         var dx = false;
         var du, dt;
-
         function dr() {
           dx = true;
         }
-
         n(function () {
           function dy(dA) {
             setTimeout(function () {
@@ -3257,7 +3109,6 @@ if (typeof window.Matomo !== 'object') {
               dy(dA);
             }, dA);
           }
-
           function dz(dA) {
             setTimeout(function () {
               if (!ck) {
@@ -3270,7 +3121,6 @@ if (typeof window.Matomo !== 'object') {
               dz(dA);
             }, dA);
           }
-
           if (ds) {
             du = ['scroll', 'resize'];
             for (dt = 0; dt < du.length; dt++) {
@@ -3288,7 +3138,6 @@ if (typeof window.Matomo !== 'object') {
           }
         });
       }
-
       var bK = {
         enabled: true,
         requests: [],
@@ -4213,11 +4062,9 @@ if (typeof window.Matomo !== 'object') {
       });
       u.trigger('TrackerSetup', [this]);
     }
-
     function K() {
       return { push: aj };
     }
-
     function c(ay, ax) {
       var az = {};
       var av, aw;
@@ -4244,7 +4091,6 @@ if (typeof window.Matomo !== 'object') {
       }
       return ay;
     }
-
     var E = [
       'addTracker',
       'forgetCookieConsentGiven',
@@ -4273,7 +4119,6 @@ if (typeof window.Matomo !== 'object') {
       'disablePerformanceTracking',
       'setPagePerformanceTiming'
     ];
-
     function ah(av, au) {
       var at = new T(av, au);
       L.push(at);
@@ -4287,7 +4132,6 @@ if (typeof window.Matomo !== 'object') {
       u.trigger('TrackerAdded', [at]);
       return at;
     }
-
     ar(W, 'beforeunload', am, false);
     ar(
       W,
@@ -4335,7 +4179,6 @@ if (typeof window.Matomo !== 'object') {
         if (!av) {
           return;
         }
-
         function at(aE) {
           var aG = J.getElementsByTagName('iframe');
           for (aw = 0; aw < aG.length; aw++) {
@@ -4347,7 +4190,6 @@ if (typeof window.Matomo !== 'object') {
             }
           }
         }
-
         if (M(av.maq_initial_value)) {
           at({
             maq_opted_in: av.maq_initial_value && aA.hasConsent(),
@@ -4499,7 +4341,6 @@ if (typeof window.Matomo !== 'object') {
     }
     return !!_paq.length;
   }
-
   if (
     window &&
     'object' === typeof window.matomoPluginAsyncInit &&
@@ -4554,7 +4395,6 @@ if (typeof window.piwik_log !== 'function') {
       } catch (i) {}
       return;
     }
-
     var d,
       a = window.Matomo.getTracker(g, e);
     a.setDocumentTitle(c);
