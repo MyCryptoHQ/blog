@@ -3,7 +3,7 @@
 !(function (e, t) {
   var n = !0,
     o = null,
-    i = t.querySelector('[src*="t.ghostboard.io"]'),
+    i = t.querySelector('[src*="ghostboard.js"]'),
     r = 'https://api.ghostboard.io/',
     a = i && i.getAttribute('data-gbid');
   if (!a)
