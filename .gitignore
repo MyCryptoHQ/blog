@@ -1,3 +1,8 @@
 node_modules
 .cache
 public
+yarn-error.log
+
+.env
+src/locales/*/messages.ts
+src/locales/*/messages.d.ts
