@@ -10,15 +10,24 @@ interface Settings {
   reporter: Reporter;
   createNode: Actions['createNode'];
   createNodeId: NodePluginArgs['createNodeId'];
+  parentId: string;
 }
 
-interface ImageNode {
+interface HTMLNode extends Node {
+  tagName: string;
+  children: HTMLNode[];
+}
+
+interface ImageNode extends HTMLNode {
   properties: {
+    className: string[];
     src: string;
     srcset: string;
     width: string;
     height: string;
     sizes: string;
+    loading: string;
+    decoding: string;
   };
 }
 
@@ -26,16 +35,16 @@ const getExtension = (url: string): string | undefined =>
   url.split(/[#?]/)[0].split('.').pop()?.trim();
 
 export const imageProcessor =
-  ({ store, cache, reporter, createNode, createNodeId }: Settings) =>
+  ({ store, cache, reporter, createNode, createNodeId, parentId }: Settings) =>
   async (ast: Node) => {
     const nodes: ImageNode[] = [];
 
-    visit(ast, 'element', (node) => {
-      if ((node as unknown as Record<string, string>).tagName !== 'img') {
+    visit(ast, 'element', (node: HTMLNode) => {
+      if (node.tagName !== 'img') {
         return;
       }
 
-      const image = node as unknown as ImageNode;
+      const image = node as ImageNode;
       const extension = getExtension(image.properties.src);
       if (extension === 'ico' || extension === 'gif' || extension === 'svg') {
         return;
@@ -48,6 +57,7 @@ export const imageProcessor =
       try {
         const file = await createRemoteFileNode({
           url: node.properties.src,
+          parentNodeId: parentId,
           store,
           cache,
           reporter,
@@ -57,9 +67,12 @@ export const imageProcessor =
 
         const { src, srcSet, sizes } = await fluid({ file, args: {}, cache, reporter });
         if (src && srcSet) {
+          node.properties.className.push('gatsby-resp-image-image');
           node.properties.src = src;
           node.properties.srcset = srcSet;
           node.properties.sizes = sizes;
+          node.properties.loading = 'lazy';
+          node.properties.decoding = 'async';
         }
       } catch {
         // noop

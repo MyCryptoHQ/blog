@@ -1,18 +1,15 @@
 /* eslint-disable */
 
-/**
- * @source https://t.ghostboard.io/min.js
- */
 !(function (e, t) {
   var n = !0,
     o = null,
-    i = t.querySelector('[src*="ghostboard.js"]'),
+    i = t.querySelector('[src*="t.ghostboard.io"]'),
     r = 'https://api.ghostboard.io/',
     a = i && i.getAttribute('data-gbid');
   if (!a)
     return (
-      console.warning(
-        '👉 Please check your Ghostboard tracking code, it looks invalid. More info: https://ghostboard.io/blog/how-to-setup-ghostboard/'
+      console.warn(
+        'ðŸ‘‰ Please check your Ghostboard tracking code, it looks invalid. More info: https://ghostboard.io/blog/how-to-setup-ghostboard/'
       ),
       !1
     );
@@ -25,38 +22,56 @@
       : void (e['on' + t] = n);
   }
 
-  function u() {
+  function u(e) {
+    var t = new Image(),
+      n = r + a + '/e.gif?';
+    (n += 'l=' + encodeURIComponent(location)),
+      (n += '&e=' + encodeURIComponent(e.message || JSON.stringify(e))),
+      (t.src = n);
+  }
+
+  var s = (function () {
+    try {
+      return /Mobile|Tablet|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune|Playbook/i.test(
+        window.navigator.userAgent
+      );
+    } catch (e) {
+      return u(e), !1;
+    }
+  })();
+
+  function l() {
     try {
       if (!n) return !1;
       n = !1;
       var i = 0,
-        u = t.querySelector("link[type='application/rss+xml']"),
-        d = t.querySelector('head base'),
-        l = u || d,
-        f = l ? l.href : '',
-        h = t.querySelector("link[rel='shortcut icon']"),
-        g = t.querySelector("link[rel='icon']"),
-        v = h || g,
-        p = v ? v.href : '',
-        w = location || e.location || t.location;
+        l = t.querySelector("link[type='application/rss+xml']"),
+        f = t.querySelector('head base'),
+        h = l || f,
+        g = h ? h.href : '',
+        v = t.querySelector("link[rel='shortcut icon']"),
+        w = t.querySelector("link[rel='icon']"),
+        p = v || w,
+        b = p ? p.href : '',
+        y = location || e.location || t.location;
       if ('undefined' != typeof ghost && ghost && ghost.url && ghost.url.api()) {
-        var b = ghost.url.api();
-        0 === (f = b.substring(0, b.indexOf('/ghost/') + 1)).indexOf('//') &&
-          (f = location.protocol + f);
+        var m = ghost.url.api();
+        0 === (g = m.substring(0, m.indexOf('/ghost/') + 1)).indexOf('//') &&
+          (g = location.protocol + g);
       } else {
-        f && -1 !== f.indexOf('/rss/')
-          ? (f = f.substring(0, f.length - 4))
-          : f || (f = w.origin + '/');
+        g && -1 !== g.indexOf('/rss/')
+          ? (g = g.substring(0, g.length - 4))
+          : g || (g = y.origin + '/');
       }
-      var y = {
-          A: f,
+      var S = {
+          A: g,
           C: navigator.language || navigator.userLanguage,
-          F: w.origin,
-          I: p,
+          F: y.origin,
+          I: b,
           U: location.href || t.url,
           V: 2
         },
-        m = (function () {
+        T = (function () {
           var n = '';
           try {
             n = e.top.doc.referrer;
@@ -70,15 +85,15 @@
           }
           return '' === n ? t.referrer : n;
         })();
-      m && (y.D = m);
-      var S = t.head.querySelector('[name=generator]');
-      S && S.content && (y.E = S.content);
-      var T = null,
-        O = null,
+      T && (S.D = T);
+      var M = t.head.querySelector('[name=generator]');
+      M && M.content && (S.E = M.content);
+      var O = null,
+        k = null,
         x = !1,
-        M = function (e) {
+        I = function (e) {
           if (o || x) return !1;
-          (x = !0), (y.G = e), (T = new Date().getTime()), (i = 0);
+          (x = !0), (S.G = e), (O = new Date().getTime()), (i = 0);
           var n = (function () {
             try {
               return new XMLHttpRequest();
@@ -107,47 +122,37 @@
                   (function () {
                     for (var e = t.getElementsByTagName('a'), n = 0; n < e.length; n++)
                       c(e[n], 'click', function (e) {
-                        s(e);
+                        d(e);
                       });
                   })());
             }),
-            n.send(JSON.stringify(y));
+            n.send(JSON.stringify(S));
         },
-        L = function (e) {
-          var t,
-            n,
+        L = function (e, t) {
+          var n,
             a,
-            c = new Date().getTime(),
-            u = !O || (O && c - O >= 1e3),
-            s =
-              -1 !==
-              [
-                'beforeunload',
-                'blur',
-                'unload',
-                'focusout',
-                'pagehide',
-                'visibilityState:hidden'
-              ].indexOf(e);
+            c,
+            u = new Date().getTime();
           o &&
-            (u || s) &&
-            ((O = c),
-            (t = o),
-            (n = i),
-            (a = e),
+            (!k || (k && u - k >= 1e3) || t) &&
+            ((k = u),
+            (n = o),
+            (a = i),
+            (c = e),
             (new Image().src =
-              r + 'views/' + t + '/heartbeat.gif?t=' + n + '&e=' + encodeURIComponent(a)));
+              r + 'views/' + n + '/heartbeat.gif?t=' + a + '&e=' + encodeURIComponent(c)));
         },
         X = function (e) {
           var t = new Date().getTime();
-          !o ? M(e) : ((T = t), L(e));
+          !o ? I(e) : (O = t);
         },
         q = function (e) {
           var t, n;
           -1 !== ['blur', 'focusout', 'pagehide', 'visibilityState:hidden'].indexOf(e) &&
             ((t = new Date().getTime()),
-            (n = t - T) > 0 && ((i += parseInt(n / 1e3, 10)), (T = t))),
-            L(e);
+            (n = t - O) > 0 && ((i += parseInt(n / 1e3, 10)), (O = t))),
+            L(e, !0),
+            s && (o = null);
         };
       c(document, 'visibilitychange', function () {
         'hidden' === t.visibilityState && q('visibilityState:hidden'),
@@ -179,17 +184,11 @@
         }),
         ((t.hasFocus && t.hasFocus()) || 'visible' === t.visibilityState) && X('document-focus');
     } catch (e) {
-      !(function (e) {
-        var t = new Image(),
-          n = r + a + '/e.gif?';
-        (n += 'l=' + encodeURIComponent(location)),
-          (n += '&e=' + encodeURIComponent(e.message || JSON.stringify(e))),
-          (t.src = n);
-      })(e);
+      u(e);
     }
   }
 
-  function s(e) {
+  function d(e) {
     if (!e) return !1;
     var t = e.target || e.currentTarget;
     if (!(t && o)) return !1;
@@ -206,13 +205,13 @@
   }
 
   c(document, 'DOMContentLoaded', function () {
-    u();
+    l();
   }),
     c(document, 'readystatechange', function () {
-      u();
+      l();
     }),
     c(window, 'load', function () {
-      u();
+      l();
     }),
-    document && t.readyState && 'complete' === t.readyState && u();
+    document && t.readyState && 'complete' === t.readyState && l();
 })(window, document);

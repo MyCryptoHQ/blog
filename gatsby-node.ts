@@ -36,7 +36,14 @@ const gatsbyNode: GatsbyNode = {
 
       const file = await unified()
         .use(rehypeParse, { fragment: true })
-        .use(imageProcessor, { store, cache, reporter, createNode, createNodeId })
+        .use(imageProcessor, {
+          store,
+          cache,
+          reporter,
+          createNode,
+          createNodeId,
+          parentId: node.id
+        })
         .use(rehypeStringify)
         .process(node.html as string);
 
