@@ -67,7 +67,7 @@
     "@lingui/core": "^3.12.1",
     "@lingui/macro": "^3.12.1",
     "@lingui/react": "^3.12.1",
-    "@mycrypto/ui": "^1.9.2",
+    "@mycrypto/ui": "^1.9.3",
     "babel-runtime": "^6.26.0",
     "lodash.merge": "^4.6.2",
     "lunr": "^2.3.9",
