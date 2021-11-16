@@ -50,7 +50,7 @@ export const Post: FunctionComponent<PostProps> = ({ data }) => (
       </Breadcrumbs>
 
       <Flex flexDirection={['column', null, 'row']}>
-        <Box paddingRight="4" flex={1}>
+        <Box paddingRight={['0', null, '4']} flex={1}>
           <SubHeading fontSize="large" lineHeight="120%" marginBottom="20px">
             {data.ghostPost.title}
           </SubHeading>

@@ -2186,10 +2186,10 @@
   resolved "https://registry.yarnpkg.com/@microsoft/fetch-event-source/-/fetch-event-source-2.0.1.tgz#9ceecc94b49fbaa15666e38ae8587f64acce007d"
   integrity sha512-W6CLUJ2eBMw3Rec70qrsEW0jOm/3twwJv21mrmj2yORiaVmVYGS4sSS5yUwvQc1ZlDLYGPnClVWmUUMagKNsfA==
 
-"@mycrypto/ui@^1.9.2":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@mycrypto/ui/-/ui-1.9.2.tgz#a95f433d6e29dc720faaa007691496dd5b6e1636"
-  integrity sha512-w69UHdXX1+DTYLtaL/MyO4TIdQ83YlIKFgxkGKlmdBrzHCpVdAZ/LnDpbBouvdrn9BYNgml1jAFH5DvKny9h3A==
+"@mycrypto/ui@^1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@mycrypto/ui/-/ui-1.9.3.tgz#5ec44d6a0d764116ef3e762d7de08c7021416f33"
+  integrity sha512-GGe4noY6/D0hvQPbSWqRRIVujqwtlpEkcmHd5EkFJNHx3wQdVxJ23xi9hBjQIUUgmjJ+IukMc832FEDdkJ263g==
   dependencies:
     "@rebass/forms" "4.0.6"
     "@types/rebass" "4.0.8"
