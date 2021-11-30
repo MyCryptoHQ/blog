@@ -14,21 +14,33 @@ export const Featured: FunctionComponent<FeaturedProps> = ({ post }) => {
   const image = getImage(post.image)!;
 
   return (
-    <Box sx={{ display: 'grid' }} marginBottom="6">
+    <Container marginTop={[0, null, '5']} marginBottom="5" paddingX={[0, null, '3']}>
       <GatsbyImage alt={post.title} image={image} style={{ gridArea: '1 / 1' }} />
       <Box
+        marginX={['3', null, '4']}
+        marginTop="-32px"
+        maxWidth="870px"
         sx={{
-          gridArea: '1 / 1',
+          position: 'relative',
           zIndex: '1',
-          background: 'linear-gradient(176.73deg, rgba(255, 255, 255, 0) 2.7%, #FFFFFF 97.33%)'
+          background: 'white',
+          borderWidth: '2px',
+          borderStyle: 'solid',
+          borderColor: 'accordion.border',
+          borderRadius: 'large'
         }}
       >
         <Flex height="100%" alignItems="flex-end">
-          <Container width="100%" paddingY="24px">
+          <Box width="100%" paddingX="4" paddingY="24px">
             <Tag type="transparent">
               <Trans>Featured</Trans>
             </Tag>
-            <SubHeading fontSize="45px" lineHeight="54px" color="text.primary" marginBottom="2">
+            <SubHeading
+              fontSize={['small', null, 'large']}
+              lineHeight="54px"
+              color="text.primary"
+              marginBottom="2"
+            >
               {post.title}
             </SubHeading>
             <Body fontSize="16px" lineHeight="19px" marginBottom="24px">
@@ -39,9 +51,9 @@ export const Featured: FunctionComponent<FeaturedProps> = ({ post }) => {
                 <Trans>Read Now</Trans>
               </Button>
             </Link>
-          </Container>
+          </Box>
         </Flex>
       </Box>
-    </Box>
+    </Container>
   );
 };

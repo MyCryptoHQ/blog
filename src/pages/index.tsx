@@ -8,7 +8,9 @@ import type { GhostPost } from '../types';
 
 export interface IndexProps {
   data: {
-    featuredPost: Pick<GhostPost, 'slug' | 'title' | 'excerpt' | 'image'>;
+    featuredPost: {
+      nodes: [Pick<GhostPost, 'slug' | 'title' | 'excerpt' | 'image'>];
+    };
     recentPosts: {
       nodes: Pick<
         GhostPost,
@@ -32,7 +34,7 @@ export interface IndexProps {
 
 export const Index: FunctionComponent<IndexProps> = ({ data }) => (
   <Page>
-    <Featured post={data.featuredPost} />
+    <Featured post={data.featuredPost.nodes[0]} />
     <Box flex={1}>
       <Container>
         <Posts title={t`Featured Articles`} columns={3} marginBottom="5">
@@ -92,17 +94,23 @@ export default Index;
 
 export const query = graphql`
   {
-    featuredPost: ghostPost {
-      slug
-      title
-      excerpt
-      image {
-        childImageSharp {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            aspectRatio: 3
-            transformOptions: { cropFocus: CENTER }
-          )
+    featuredPost: allGhostPost(
+      filter: { visibility: { eq: "public" } }
+      sort: { fields: [published_at], order: DESC }
+      limit: 1
+    ) {
+      nodes {
+        slug
+        title
+        excerpt
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              aspectRatio: 3
+              transformOptions: { cropFocus: CENTER }
+            )
+          }
         }
       }
     }
