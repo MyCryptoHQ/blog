@@ -13,9 +13,9 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/index.tsx:51
-#: src/pages/posts.tsx:22
-#: src/pages/posts.tsx:24
+#: src/pages/index.tsx:52
+#: src/pages/posts.tsx:21
+#: src/pages/posts.tsx:23
 msgid "All Articles"
 msgstr ""
 
@@ -35,19 +35,19 @@ msgstr ""
 msgid "Donate Now"
 msgstr ""
 
-#: src/components/Featured.tsx:29
+#: src/components/Featured.tsx:36
 msgid "Featured"
 msgstr ""
 
-#: src/pages/index.tsx:39
+#: src/pages/index.tsx:40
 msgid "Featured Articles"
 msgstr ""
 
-#: src/pages/index.tsx:61
+#: src/pages/index.tsx:62
 msgid "Filter by author"
 msgstr ""
 
-#: src/pages/index.tsx:72
+#: src/pages/index.tsx:73
 msgid "Filter by topic"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 #: src/pages/404.tsx:23
 #: src/pages/search.tsx:27
 #: src/templates/GhostAuthor.tsx:30
-#: src/templates/GhostPost.tsx:42
+#: src/templates/GhostPost.tsx:41
 #: src/templates/GhostTag.tsx:30
 msgid "Homepage"
 msgstr ""
@@ -85,12 +85,12 @@ msgstr ""
 msgid "Please consider making a donation or purchasing a MyCrypto Membership!"
 msgstr ""
 
-#: src/components/Featured.tsx:39
+#: src/components/Featured.tsx:51
 #: src/components/Post.tsx:46
 msgid "Read Now"
 msgstr ""
 
-#: src/pages/index.tsx:44
+#: src/pages/index.tsx:45
 msgid "Recent Articles"
 msgstr ""
 
@@ -120,11 +120,11 @@ msgstr ""
 msgid "Share"
 msgstr ""
 
-#: src/pages/index.tsx:83
+#: src/pages/index.tsx:84
 msgid "Show More"
 msgstr ""
 
-#: src/components/Search.tsx:44
+#: src/components/Search.tsx:43
 msgid "Sorry, there are no results for \"{query}\". Please try another search query."
 msgstr ""
 
