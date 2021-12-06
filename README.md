@@ -16,7 +16,7 @@ The server will be accessible on `localhost:8000`.
 
 ### Production
 
-To build a static version of the blog production, run the following commands
+To build a static version of the blog for production, run the following commands
 
 ```
 yarn compile
