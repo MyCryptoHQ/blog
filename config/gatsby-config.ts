@@ -19,7 +19,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-ghost',
       options: {
-        apiUrl: 'https://blog.mycrypto.com',
+        apiUrl: 'https://ghost.mycrypto.com',
         contentApiKey: process.env.GHOST_API_KEY,
         version: 'v3'
       }
