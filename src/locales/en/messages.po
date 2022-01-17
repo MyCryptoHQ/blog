@@ -19,20 +19,16 @@ msgstr ""
 msgid "All Articles"
 msgstr ""
 
-#: src/components/Sidebar.tsx:33
+#: src/components/Sidebar.tsx:32
 msgid "Author"
 msgstr ""
 
-#: src/components/Sidebar.tsx:71
+#: src/components/Sidebar.tsx:70
 msgid "Click to copy"
 msgstr ""
 
 #: src/components/Header.tsx:39
 msgid "Contact"
-msgstr ""
-
-#: src/components/Sidebar.tsx:135
-msgid "Donate Now"
 msgstr ""
 
 #: src/components/Featured.tsx:36
@@ -51,10 +47,6 @@ msgstr ""
 msgid "Filter by topic"
 msgstr ""
 
-#: src/components/Sidebar.tsx:143
-msgid "Get Membership"
-msgstr ""
-
 #: src/pages/404.tsx:46
 msgid "Go Home"
 msgstr ""
@@ -71,7 +63,7 @@ msgstr ""
 msgid "Looks like you got lost somewhere along the way. Don't worry, the wizard can help you get back!"
 msgstr ""
 
-#: src/components/Sidebar.tsx:84
+#: src/components/Sidebar.tsx:83
 msgid "MyCrypto is the number one way to manage all of your Ethereum Accounts"
 msgstr ""
 
@@ -79,10 +71,6 @@ msgstr ""
 #: src/pages/404.tsx:27
 #: src/pages/404.tsx:36
 msgid "Page Not Found"
-msgstr ""
-
-#: src/components/Sidebar.tsx:130
-msgid "Please consider making a donation or purchasing a MyCrypto Membership!"
 msgstr ""
 
 #: src/components/Featured.tsx:51
@@ -112,11 +100,11 @@ msgstr ""
 msgid "Search here..."
 msgstr ""
 
-#: src/components/Sidebar.tsx:96
+#: src/components/Sidebar.tsx:95
 msgid "Send Us A Message"
 msgstr ""
 
-#: src/components/Sidebar.tsx:59
+#: src/components/Sidebar.tsx:58
 msgid "Share"
 msgstr ""
 
@@ -128,24 +116,12 @@ msgstr ""
 msgid "Sorry, there are no results for \"{query}\". Please try another search query."
 msgstr ""
 
-#: src/components/Sidebar.tsx:110
-msgid "Support MyCrypto"
-msgstr ""
-
-#: src/components/Sidebar.tsx:123
-msgid "We love helping the community stay safe and informed with these free educational articles, and are happy to walk you through solving problems even if they aren't directly related to MyCrypto."
-msgstr ""
-
 #: src/components/Layout.tsx:31
 msgid "What would you like to read about?"
 msgstr ""
 
-#: src/components/Sidebar.tsx:87
+#: src/components/Sidebar.tsx:86
 msgid "You can always email us for one-on-one help using <0>support@mycrypto.com</0>"
-msgstr ""
-
-#: src/components/Sidebar.tsx:117
-msgid "Your support enables MyCrypto to continue developing non-custodial, user-friendly cryptocurrency management solutions as a public good."
 msgstr ""
 
 #: src/components/Header.tsx:21
